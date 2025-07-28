@@ -15,7 +15,7 @@ body {
 
 header {
   background: #fff;
-  padding: 2rem 10%;
+  padding: 2rem 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,7 +75,7 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 10%;
+  padding: 4rem 15%;
   background: #eee;
   margin-bottom: 0;
 }
@@ -109,7 +109,7 @@ nav a {
 }
 
 .publications {
-  padding: 2.5rem 10%;
+  padding: 2.5rem 15%;
   background: #fff;
   margin-top: 0;
   margin-bottom: 0;
@@ -130,9 +130,8 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
-  width: 97%; /* Ensures full width */
-  box-sizing: border-box;
+  gap: 0rem;
+  width: 100%; /* Ensures full width */
   padding: 1.5rem 0;
   flex: 1;
 }
