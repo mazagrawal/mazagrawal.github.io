@@ -149,9 +149,9 @@ nav a {
 }
 
 .publications img {
-  width: 250px;
-  max-width: 250px;
-  max-height: 167px;
+  width: 300px;
+  max-width: 300px;
+  max-height: 200px;
   margin-top: 0;
   border-radius: 4px;
   flex-shrink: 0;
