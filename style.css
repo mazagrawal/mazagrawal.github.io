@@ -130,10 +130,11 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
   width: 97%; /* Ensures full width */
   box-sizing: border-box;
   padding: 1.5rem 0;
+  flex: 1;
 }
 
 .publications h3 {
@@ -150,12 +151,12 @@ nav a {
 
 .publications img {
   width: 300px;
-  max-width: 300px;
-  max-height: 200px;
+  height: 200px;
   margin-top: 0;
   border-radius: 4px;
   flex-shrink: 0;
   object-fit: cover;
+  flex: 0 0 auto;
 }
 
 .publications br {
