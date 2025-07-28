@@ -1,15 +1,21 @@
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
   background: #f6f6f6;
   color: #222;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 4rem;
 }
 
 header {
   background: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 1.5rem;
+  padding: 2rem 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,13 +23,52 @@ header {
 
 header h1 {
   margin: 0;
+  font-size: 1.8rem;
 }
 
 nav a {
-  margin-left: 1.5rem;
+  margin-left: 2rem;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: #222;
+  font-weight: 600;
+}
+
+.photo-header {
+  background: #fff;
+  padding: 4rem 10%;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 0;
+  padding: 0;
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 10%;
+  background: #fff;
+  margin-bottom: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
 }
 
 .about {
@@ -32,46 +77,160 @@ nav a {
   align-items: center;
   padding: 4rem 10%;
   background: #eee;
+  margin-bottom: 0;
 }
 
 .about .text {
   flex: 2;
+  padding-right: 5rem;
+}
+
+.about h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
 }
 
 .about .photo img {
   width: 180px;
+  height: 180px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .icons a {
-  margin-right: 1rem;
-  text-decoration: none;
+  margin-right: 0.5rem;
   font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.icons a strong {
+  font-weight: 700;
+  color: rgb(7, 7, 133);
 }
 
 .publications {
-  padding: 3rem 10%;
+  padding: 2.5rem 10%;
   background: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.publications h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0rem; /* Padding between line and first pub */
+  padding-bottom: 0.9rem; /* Padding between heading and line */
+  border-bottom: 1px solid #ccc;
 }
 
 .publications article {
-  background: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 97%; /* Ensures full width */
+  box-sizing: border-box;
+  padding: 1.5rem 0;
+}
+
+.publications h3 {
+  margin-top: 0;
+  margin-bottom: 0.2rem; /* Adds space below the h3 */
+  font-weight: bold;
+}
+
+.publications .content p {
+  margin-top: 0; /* Removes default top margin from paragraph */
+  margin-bottom: 0.2rem;
+  flex: 1;
 }
 
 .publications img {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 1rem;
-  border-radius: 8px;
+  width: 250px;
+  max-width: 250px;
+  max-height: 167px;
+  margin-top: 0;
+  border-radius: 4px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.publications br {
+  margin-bottom: 0.3rem;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
   background: #f0f0f0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
+.box-link {
+  display: inline-block;
+  padding: 0.3rem;
+  color: #007acc;
+  text-decoration: none;
+  border: 1px solid #007acc;
+  border-radius: 4px;
+  font-weight: 450;
+  margin-right: 0.3rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.box-link:hover {
+  background-color: #007acc;
+  color: white;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .overlay {
+  opacity: 0.6;
+}
+
+.photo-item .label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  pointer-events: none;
+}
+
+.photo-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* dark semi-transparent */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 6px;
+}
+
+.photo-item:hover .label {
+  opacity: 1;
+}
