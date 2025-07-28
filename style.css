@@ -1,0 +1,77 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+  color: #222;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 10%;
+  background: #eee;
+}
+
+.about .text {
+  flex: 2;
+}
+
+.about .photo img {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.icons a {
+  margin-right: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.publications {
+  padding: 3rem 10%;
+  background: #fff;
+}
+
+.publications article {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.publications img {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f0f0f0;
+  font-size: 0.9rem;
+}
+
