@@ -15,7 +15,7 @@ body {
 
 header {
   background: #fff;
-  padding: 2rem 15%;
+  padding: 2rem 20%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +58,7 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 1.5rem 10%;
   background: #fff;
   margin-bottom: 0;
@@ -75,7 +75,7 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 15%;
+  padding: 4rem 20%;
   background: #eee;
   margin-bottom: 0;
 }
@@ -109,7 +109,7 @@ nav a {
 }
 
 .publications {
-  padding: 2.5rem 15%;
+  padding: 2.5rem 20%;
   background: #fff;
   margin-top: 0;
   margin-bottom: 0;
