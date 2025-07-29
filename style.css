@@ -33,6 +33,11 @@ nav a {
   font-weight: 600;
 }
 
+a {
+  text-decoration: none;
+  color: #0786db;
+}
+
 .photo-header {
   background: #fff;
   padding: 4rem 10%;
