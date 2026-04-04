@@ -243,11 +243,28 @@ footer {
 }
 
 @media (max-width: 768px) {
-  header {
+  header:not(.photo-header) {
     padding: 1rem 1.25rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  .photo-header {
+    padding: 1rem 1.25rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .photo-header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .photo-header nav a {
+    margin: 0;
   }
 
   nav a {
