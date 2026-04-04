@@ -251,7 +251,7 @@ footer {
   }
 
   .photo-header {
-    padding: 1rem 1.25rem;
+    padding: 0.75rem 10% 0.25rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
